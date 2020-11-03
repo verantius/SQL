@@ -1,0 +1,19 @@
+create table dbo.wydzialy
+	(ID INT PRIMARY KEY IDENTITY, Akronim VARCHAR (4) NOT NULL, Wydzial VARCHAR(30) NOT NULL, CONSTRAINT SprawdzamAkronim CHECK (Akronim IN ('ZIE')))
+	
+INSERT INTO dbo.wydzialy (Akronim, Wydzial)
+VALUES ('ZIE', 'Wydział Zzania i Ekon995om')
+
+drop table dbo.wydzialy
+
+UPDATE dbo.ksiazka
+SET Miejsce_wydania='miejsce nieznane'
+WHERE Miejsce_wydania IS NULL
+
+SELECT
+*
+FROM dbo.czytelnik
+
+UPDATE dbo.czytelnik
+SET Nr_GG = '878'
+WHERE Wydzial = 'ZIE' 
